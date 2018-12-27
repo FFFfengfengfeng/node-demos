@@ -6,9 +6,20 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-    name = 'FFF';
-    address = {
-        province: '广东',
-        city: '广州'
+    name: string;
+    list: Array<object>;
+
+    constructor() {
+        this.name = 'FFF'
+        this.list = [
+            {
+                name: 'FFF',
+                sex: '男'
+            },
+            {
+                name: 'ZZZ',
+                sex: '女'
+            }
+        ]
     }
 }
