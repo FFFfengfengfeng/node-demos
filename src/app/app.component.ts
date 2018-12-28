@@ -6,31 +6,26 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-    name = 'FFF';
-    list = [
-                {
-                    name: 'FFF',
-                    sex: '男'
-                },
-                {
-                    name: 'ZZZ',
-                    sex: '女'
-                }
-            ];
-    showName = true;
+    name: string;
+    list: Array<object>;
+    showName: boolean;
+    toggleShow: Function;
 
-    // constructor() {
-    //     this.name = 'FFF';
-    //     this.list = [
-    //         {
-    //             name: 'FFF',
-    //             sex: '男'
-    //         },
-    //         {
-    //             name: 'ZZZ',
-    //             sex: '女'
-    //         }
-    //     ];
-    //     this.showName = false;
-    // }
+    constructor() {
+        this.name = 'FFF';
+        this.list = [
+            {
+                name: 'FFF',
+                sex: '男'
+            },
+            {
+                name: 'ZZZ',
+                sex: '女'
+            }
+        ];
+        this.showName = false;
+        this.toggleShow = () => {
+            this.showName = !this.showName;
+        }
+    }
 }
