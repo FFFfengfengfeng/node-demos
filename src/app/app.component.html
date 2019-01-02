@@ -8,6 +8,8 @@
     <li *ngFor="let item of list">姓名: {{ item.name }}--性别: {{ item.sex }}</li>
 </ul>
 
+<app-goods-list></app-goods-list>
+
 <a href="javascript:;" (click)="toggleShow()">{{ showName ? '隐藏语句' : '显示语句' }}</a>
 
 <p *ngIf="showName">这是语句</p>

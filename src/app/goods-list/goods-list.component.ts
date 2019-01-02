@@ -14,6 +14,7 @@ export class GoodsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+      
   }
 
 }
