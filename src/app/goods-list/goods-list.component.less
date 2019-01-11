@@ -1,0 +1,38 @@
+.container{
+    width: 1190px;
+    margin: 0 auto;
+}
+.goods-list{
+    list-style: none;
+    padding: 0;
+    &::after{
+        display: block;
+        clear: both;
+        content: ' ';
+    }
+    .goods-list-item{
+        overflow: hidden;
+        padding: 0;
+        list-style: none;
+        float: left;
+        width: 374px;
+        border: 1px solid #F2F2F2;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 30px #EEE;
+        img{
+            display: block;
+            width: 100%;
+        }
+        h3{
+            font-size: 20px;
+            padding: 0 0 0 20px;
+        }
+        p{
+            font-size: 14px;
+            color: #666;
+            padding: 0 0 0 20px;
+        }
+    }
+}
