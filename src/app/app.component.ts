@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
     name: string;
     list: Array<object>;
+    skills: Array<string>;
     showName: boolean;
     toggleShow: Function;
+    addSkill: Function;
 
     constructor() {
         this.name = 'FFF';
@@ -23,9 +25,15 @@ export class AppComponent {
                 sex: '女'
             }
         ];
+        this.skills = ['音乐', '篮球'];
         this.showName = false;
         this.toggleShow = () => {
             this.showName = !this.showName;
+        },
+        this.addSkill = (skill: string)=> {
+            const _this = this;
+
+            _this.skills.push(skill);
         }
     }
 }

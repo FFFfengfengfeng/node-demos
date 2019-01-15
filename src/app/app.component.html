@@ -8,7 +8,17 @@
     <li *ngFor="let item of list">姓名: {{ item.name }}--性别: {{ item.sex }}</li>
 </ul>
 
-<app-goods-list></app-goods-list>
+<!-- <app-goods-list></app-goods-list> -->
+
+<h3>我的技能</h3>
+<ul>
+    <li *ngFor="let item of skills">{{ item }}</li>
+</ul>
+<form (submit)="addSkill(skill.value)">
+    <label>添加技能</label>
+    <input type="text" #skill>
+    <button type="submit">确定</button>
+</form>
 
 <a href="javascript:;" (click)="toggleShow()">{{ showName ? '隐藏语句' : '显示语句' }}</a>
 
