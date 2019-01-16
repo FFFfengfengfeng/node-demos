@@ -4,18 +4,24 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { GoodsListComponent } from './goods-list/goods-list.component';
 import { from } from 'rxjs';
+import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoodsListComponent
+    GoodsListComponent,
+    ArticleListComponent,
+    ArticleDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
