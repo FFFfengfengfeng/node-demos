@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { article } from '../interface/article';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ArticleService } from '../service/article/article.service'; 
 
 @Component({
     selector: 'app-article-list',
@@ -11,18 +11,14 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ArticleListComponent implements OnInit {
     list: any
 
-    constructor(private http: HttpClient, private dz: DomSanitizer) {
+    constructor(private http: HttpClient, private dz: DomSanitizer, private articleService: ArticleService) {
         this.list = [];
     }
 
     ngOnInit() {
-        this.http
-            .get('http://localhost:7001/article/list')
+        this.articleService.getArticles()
             .subscribe(data => {
-                console.log(typeof data);
                 this.list = data;
-            }, error => {
-                console.log(error);
             });
     }
 
