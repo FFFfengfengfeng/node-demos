@@ -1,7 +1,0 @@
-<ul class="article-list">
-    <li class="article-list-item" *ngFor="let item of list">
-        <h3 class="title">{{ item.title }}</h3>
-        <div class="content" [innerHTML]="transformHtml(item.content)"></div>
-        <p class="time">{{ item.created_at }}</p>
-    </li>
-</ul>
