@@ -9,6 +9,7 @@ import { GoodsListComponent } from './goods-list/goods-list.component';
 import { from } from 'rxjs';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
