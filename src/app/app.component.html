@@ -8,6 +8,9 @@
     <a routerLink="article-list">文章</a> |
     <a routerLink="article-detail">文章详情</a>
 </nav>
+
+<input type="text" #myInput (keydown.enter)="onEnter($event, myInput.value)">
+<a href="javascript:;" (click)="onClick($event, myInput.value)">点击一下</a>
 <article-list></article-list>
 
 <router-outlet></router-outlet>
