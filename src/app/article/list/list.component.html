@@ -1,3 +1,7 @@
-<p>
-  list works!
-</p>
+<ul>
+    <li *ngFor="let item of articleService.lists; index as i;">
+        <h3>{{ item.title }} ({{ i }})</h3>
+        <p>{{ item.content }}</p>
+        <i>{{ item.time }}</i>
+    </li>
+</ul>

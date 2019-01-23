@@ -6,17 +6,16 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+    message: string = '123';
     ngOnInit() {
 
     }
 
     onClick(e, v) {
-        console.log(e);
-        console.log(v);
+        this.message = v;
     }
     
     onEnter(e, v) {
-        console.log(e);
-        console.log(v);
+        this.message = v;
     }
 }
