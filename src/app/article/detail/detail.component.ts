@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'article-detail',
@@ -13,4 +13,5 @@ export class ArticleDetail implements OnInit {
     }
 
     @Input() message: string;
+    @Output() update = new EventEmitter<{text: string}>();
 }

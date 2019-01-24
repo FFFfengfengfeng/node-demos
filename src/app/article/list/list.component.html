@@ -1,7 +1,5 @@
-<ul>
-    <li *ngFor="let item of articleService.lists; index as i;">
-        <h3>{{ item.title }} ({{ i }})</h3>
-        <p>{{ item.content }}</p>
-        <i>{{ item.time }}</i>
-    </li>
-</ul>
+
+<input type="text" [(ngModel)]="content" #Jcontent placeholder="输入内容">
+<input type="text" [(ngModel)]="id" #Jid placeholder="输入id">
+<a href="javascript:;" (click)="onClick(Jid.value, Jcontent.value)">更新</a>
+<p *ngFor="let item of articleService.messages; index as i;">id: {{ item.id }} - content: {{ item.content }}</p>

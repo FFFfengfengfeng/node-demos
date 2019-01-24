@@ -8,9 +8,10 @@
     <a routerLink="article-list">文章</a> |
     <a routerLink="article-detail">文章详情</a>
 </nav>
-<input type="text" #myInput (keydown.enter)="onEnter($event, myInput.value)">
+<!-- <input type="text" #myInput (keydown.enter)="onEnter($event, myInput.value)" [(ngModel)]="message">
 <a href="javascript:;" (click)="onClick($event, myInput.value)">点击一下</a>
-<!-- <article-list></article-list> -->
-<article-detail [message]="message"></article-detail>
+{{ message }} -->
+<article-list [id]="id" [content]="content" (update)="onUpdate($event)"></article-list>
+<!-- <article-detail [message]="message"></article-detail> -->
 
 <router-outlet></router-outlet>

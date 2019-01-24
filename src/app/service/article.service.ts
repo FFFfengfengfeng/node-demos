@@ -6,16 +6,26 @@ import { Injectable } from '@angular/core';
 export class ArticleService {
     constructor() { }
 
-    lists: Array<object> = [
+    messages: Array<{id: number, content: string}> = [
         {
-            title: '123',
+            id: 0,
             content: '2345',
-            time: '2019-01-23'
         },
         {
-            title: '123',
+            id: 1,
             content: '2345',
-            time: '2019-01-23'
         },
-    ]
+    ];
+
+    update(item) {
+        const _this = this;
+
+        console.log(item);
+
+        if (_this.messages[item.id]) {
+            return _this.messages[item.id].content = item.content;
+        } else {
+            return _this.messages.push(item);
+        }
+    }
 }
