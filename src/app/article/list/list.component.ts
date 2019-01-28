@@ -7,8 +7,10 @@ import { ArticleService } from '../../service/article.service';
     styleUrls: ['./list.component.less']
 })
 export class ArticleList implements OnInit {
-
-    constructor(private articleService: ArticleService) { }
+    isActive: boolean = false;
+    constructor(private articleService: ArticleService) { 
+        
+    }
 
     ngOnInit() {
     }
@@ -21,5 +23,9 @@ export class ArticleList implements OnInit {
     onClick(id, content) {
         console.log({id: id, content: content});
         this.update.emit({id: id, content: content});
+    }
+
+    changeColor() {
+        this.isActive = !this.isActive;
     }
 }

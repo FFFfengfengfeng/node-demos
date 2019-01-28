@@ -3,3 +3,6 @@
 <input type="text" [(ngModel)]="id" #Jid placeholder="输入id">
 <a href="javascript:;" (click)="onClick(Jid.value, Jcontent.value)">更新</a>
 <p *ngFor="let item of articleService.messages; index as i;">id: {{ item.id }} - content: {{ item.content }}</p>
+
+<p [ngClass]="{'active': isActive}">ngClass指令</p>
+<p (click)="changeColor()">点击改变文字颜色</p>
